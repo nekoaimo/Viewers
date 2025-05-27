@@ -85,5 +85,15 @@
     "StowMaxInstances": 10,
     "StowMaxSize": 10,
     "QidoCaseSensitive": false
+  },
+
+  "PostgreSQL" : {
+    "EnableIndex" : true,
+    "EnableStorage" : true,
+    "Host" : "127.0.0.1",
+    "Port" : 5432,
+    "Database" : "orthanc",
+    "Username" : "postgres",
+    "Password" : "P@ss1234nekoaimo"
   }
 }

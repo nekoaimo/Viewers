@@ -44,3 +44,20 @@ services:
     ports:
       - '4242:4242' # Orthanc REST API
       - '8042:8042' # Orthanc HTTP
+
+  # neko add orthanc postgres
+  postgres:
+    image: postgres:15
+    hostname: postgres
+    container_name: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: orthanc
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: P@ss1234nekoaimo
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    networks:
+      - default
