@@ -1,7 +1,5 @@
 {
   "Name": "Orthanc inside Docker",
-  "StorageDirectory": "/var/lib/orthanc/db",
-  "IndexDirectory": "/var/lib/orthanc/db",
   "StorageCompression": false,
   "MaximumStorageSize": 0,
   "MaximumPatientCount": 0,
@@ -80,20 +78,24 @@
     "Root": "/dicom-web/",
     "EnableWado": true,
     "WadoRoot": "/wado",
-    "Host": "127.0.0.1",
+    "Host": "0.0.0.0",
     "Ssl": false,
     "StowMaxInstances": 10,
     "StowMaxSize": 10,
     "QidoCaseSensitive": false
   },
 
-  "PostgreSQL" : {
-    "EnableIndex" : true,
-    "EnableStorage" : true,
-    "Host" : "127.0.0.1",
-    "Port" : 5432,
-    "Database" : "orthanc",
-    "Username" : "postgres",
-    "Password" : "P@ss1234nekoaimo"
+  "PostgreSQL": {
+    "EnableIndex": true,
+    "EnableStorage": true,
+    "Host": "postgres",
+    "Port": 5432,
+    "Database": "orthanc",
+    "Username": "postgres",
+    "Password": "P@ss1234nekoaimo",
+    "EnableSsl": false,
+    "MaximumConnectionRetries": 10,
+    "ConnectionRetryInterval": 5,
+    "ConnectionTimeout": 5
   }
 }
