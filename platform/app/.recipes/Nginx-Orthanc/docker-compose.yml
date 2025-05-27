@@ -51,7 +51,7 @@ services:
     hostname: postgres
     container_name: postgres
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ./volumes/postgres_data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: orthanc
       POSTGRES_USER: postgres
